@@ -1,0 +1,14 @@
+{
+  "benchmark_cases": 5,
+  "evaluated_cases": 5,
+  "coverage_percent": 100.0,
+  "missing_cases": [],
+  "models": [
+    "claude-sonnet-5"
+  ],
+  "mean_automated_score": 59.6,
+  "mean_field_concept_coverage": 37.8,
+  "mean_claim_safety": 100.0,
+  "mean_latency_seconds": 20.23,
+  "total_latency_seconds": 101.15
+}

@@ -1,0 +1,24 @@
+{
+  "benchmark_cases": 5,
+  "evaluated_cases": 5,
+  "coverage_percent": 100.0,
+  "missing_cases": [],
+  "models": [
+    "claude-sonnet-5"
+  ],
+  "mean_automated_score": 59.6,
+  "mean_field_concept_coverage": 37.8,
+  "mean_claim_safety": 100.0,
+  "mean_latency_seconds": 20.23,
+  "total_latency_seconds": 101.15,
+  "provisional_expert_mean": 82.6,
+  "mean_expert_minus_automated": 23.0,
+  "provisional_expert_scores": {
+    "BFB-001": 92.0,
+    "BFB-002": 60.0,
+    "BFB-003": 90.0,
+    "BFB-004": 80.0,
+    "BFB-005": 91.0
+  },
+  "interpretation": "Automated scores are field-specific lexical rubric proxies, not biological-accuracy scores."
+}

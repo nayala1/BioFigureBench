@@ -1,0 +1,32 @@
+# BioFigureBench benchmark card
+
+## Version
+
+0.2.0 — final five-case MVP.
+
+## Intended use
+
+Evaluate whether multimodal AI systems can interpret biological figures while separating direct observations, controls, supported conclusions, unsupported claims, and useful follow-up experiments.
+
+## Cases
+
+The release contains five openly licensed figures spanning cell microscopy, neurodevelopment, single-cell genomics, cancer functional genomics, and preclinical therapeutics.
+
+## Automated scoring
+
+The automated rubric reports:
+
+- field-specific concept coverage
+- explicit claim/contradiction safety
+- structured-response completeness
+- a weighted total score
+
+Concepts are scored only within their intended response field. This prevents a model from receiving observation credit merely because it repeats the expected term in a follow-up or unsupported-claim field.
+
+## Known limitation
+
+The automated score remains a lexical-semantic proxy. It may miss paraphrased hallucinations and subtle panel-level errors. At least one domain-expert review should accompany any public model-comparison claim.
+
+## Licensing
+
+Each JSONL record includes article, DOI, figure, source URL, license, and attribution metadata. Source licenses must be preserved.

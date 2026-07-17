@@ -1,0 +1,6 @@
+case_id,model,rater,experiment_0_20,observations_0_30,controls_and_calibration_0_15,supported_conclusion_0_15,mechanistic_restraint_0_10,follow_up_0_10,expert_total_0_100,hallucination_count,critical_errors,notes
+BFB-001,claude-sonnet-5,,,,,,,,,,,
+BFB-002,claude-sonnet-5,,,,,,,,,,,
+BFB-003,claude-sonnet-5,,,,,,,,,,,
+BFB-004,claude-sonnet-5,,,,,,,,,,,
+BFB-005,claude-sonnet-5,,,,,,,,,,,
