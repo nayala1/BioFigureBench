@@ -9,7 +9,7 @@ Version 0.2.0 is intentionally small and auditable. It is not a comprehensive
 biology benchmark; it is a polished pilot for testing figure-grounded reasoning
 on curated, expert-reviewed cases.
 
-Public report placeholder: `https://<github-user>.github.io/BioFigureBench/`
+Public report: `https://nayala1.github.io/BioFigureBench/`
 
 ## Benchmark Domains
 
