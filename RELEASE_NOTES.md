@@ -32,9 +32,10 @@ package and command-line interface.
 - All five benchmark cases completed successfully.
 - Mean automated concept-coverage score: 59.6/100.
 - Provisional mean domain-expert score: 82.6/100.
-- Mean model latency: 20.23 seconds per case.
-- Claude generally showed strong control identification, evidence calibration,
-  and restraint around unsupported mechanistic claims.
+- Mean end-to-end response latency: 20.23 seconds per case.
+- Across this five-case pilot, Claude generally showed strong control
+  identification, evidence calibration, and restraint around unsupported
+  mechanistic claims.
 - The clearest failure involved panel-level interpretation of neuronal
   morphology in BFB-002.
 
