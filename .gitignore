@@ -10,6 +10,8 @@ __pycache__/
 *.key
 *.pem
 .DS_Store
+.Rhistory
+.RData
 .vscode/
 .idea/
 *.tmp

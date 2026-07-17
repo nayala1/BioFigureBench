@@ -1,17 +1,45 @@
-# BioFigureBench
+# BioReasonBench
 
-BioFigureBench is a five-case MVP benchmark for evaluating multimodal AI
-interpretation of biological figures. It focuses on evidence-calibrated
-scientific reasoning: what a figure directly supports, what controls or
-orthogonal evidence are needed, and where a model overclaims beyond the data.
+BioReasonBench is a reproducible benchmark for evaluating how multimodal AI
+models reason through life-sciences evidence.
 
-Version 0.2.0 is intentionally small and auditable. It is not a comprehensive
-biology benchmark; it is a polished pilot for testing figure-grounded reasoning
-on curated, expert-reviewed cases.
+The v0.2.0 release contains a five-case Biological Figure Interpretation pilot
+assessing whether models can interpret biological figures, identify
+experimental controls, distinguish observations from conclusions, calibrate
+claims to the available evidence, and propose informative follow-up
+experiments.
 
-Public report: `https://nayala1.github.io/BioFigureBench/`
+BioReasonBench is currently distributed through the `biofigurebench` Python
+package and command-line interface. The v0.2.0 release contains the Biological
+Figure Interpretation pilot.
 
-## Benchmark Domains
+This is the first public BioReasonBench release, containing the Biological
+Figure Interpretation pilot developed from the earlier BioFigureBench working
+project.
+
+Interactive report: `https://nayala1.github.io/BioReasonBench/`
+
+## Overview
+
+BioReasonBench is intended as a broader life-sciences reasoning benchmark. The
+current v0.2.0 release is intentionally small and auditable: it evaluates
+figure-grounded scientific reasoning on five curated, expert-reviewed cases.
+
+Future benchmark tracks may evaluate other scientific reasoning tasks, but they
+are not implemented in v0.2.0.
+
+## Current Benchmark Track
+
+The Biological Figure Interpretation pilot evaluates whether a model can:
+
+- identify the experiment or workflow shown in a figure
+- describe direct observations without over-interpreting them
+- identify controls and statistical limits
+- separate observations from supported conclusions
+- avoid unsupported scientific claims
+- propose informative follow-up experiments
+
+## Five Biological Domains
 
 - Cell biology and quantitative microscopy.
 - Neurodevelopment and C. elegans genetics.
@@ -28,7 +56,7 @@ python -m pip install --upgrade pip
 pip install -e ".[dev,anthropic]"
 ```
 
-## Validation
+## Dataset Validation
 
 Validate the final five-case dataset:
 
@@ -44,7 +72,7 @@ Run tests:
 .venv/bin/pytest
 ```
 
-## Pipeline
+## Running The Pipeline
 
 The canonical end-to-end command evaluates all five cases, writes each
 completed response, scores available responses, and generates an HTML report:
@@ -67,33 +95,52 @@ Individual commands are also available:
 .venv/bin/biofigurebench report --help
 ```
 
+## Scoring Approach
+
+The automated score is a field-specific lexical concept-coverage proxy. It
+checks whether expected concepts appear in the intended structured response
+field, whether explicit prohibited claims or contradictions are triggered, and
+whether the response is complete.
+
+The automated score is not a standalone biological-accuracy score. Expert
+review remains necessary for subtle panel-level visual errors and biological
+interpretation.
+
 ## Pilot Results
 
 The included Claude Sonnet 5 baseline in
 `results/claude-sonnet-5-final/` evaluated 5 of 5 cases.
 
-- Mean automated rubric score: 59.6.
-- Provisional single-reviewer expert mean: 82.6.
-- Mean latency: 20.23 seconds.
-
-The automated score is a field-specific lexical concept-coverage proxy. It is
-not a biological-accuracy score. The expert review is provisional and based on
-a single reviewer; it is included to show where biological judgment diverges
-from lexical rubric matching.
+- Mean automated concept-coverage score: 59.6/100.
+- Provisional single-reviewer expert mean: 82.6/100.
+- Mean latency: 20.23 seconds per case.
 
 The pilot finding is that lexical scoring can make concept coverage
-transparent, but it can miss semantic paraphrases and some panel-level
-biological errors.
+transparent, but it can miss semantically correct paraphrases and some
+panel-level biological errors.
 
-## Final MVP Cases
+## Expert Review
 
-- BFB-001: label-free holotomography and organelle-identification limits.
-- BFB-002: C. elegans motor-neuron tract placement, commissural laterality, and
-  dorsal nerve cord continuity.
-- BFB-003: single-cell nascent-RNA workflow benchmarking.
-- BFB-004: in vivo single-cell CRISPR screen validation.
-- BFB-005: preclinical dose-response, toxicity proxy, and translational
-  calibration.
+The publication-facing expert-review artifacts are in `docs/`:
+
+- `docs/index.html`
+- `docs/expert_review_scores.csv`
+- `docs/expert_review_metrics.json`
+
+The expert review is provisional and based on a single reviewer. It is included
+to show where biological judgment diverges from lexical rubric matching.
+
+## Limitations
+
+- The v0.2.0 release contains exactly five pilot cases.
+- The current release evaluates biological figure interpretation only.
+- Scores are sensitive to lexical rubric wording and do not replace biological
+  expert review.
+- Expert scores are provisional and single-reviewer.
+- Baseline results were generated using one model.
+- The benchmark does not yet support formal claims about comparative model
+  performance.
+- Third-party source figures remain governed by their original licenses.
 
 ## Repository Structure
 
@@ -121,19 +168,9 @@ biological errors.
 The `docs/` files are the publication-facing expert-review report artifacts
 used for GitHub Pages.
 
-## Limitations
+## Licensing And Attribution
 
-- The benchmark has exactly five MVP cases.
-- Scores are sensitive to lexical rubric wording and do not replace biological
-  expert review.
-- Expert scores are provisional and single-reviewer.
-- The benchmark evaluates figure interpretation, not broad scientific
-  competence or clinical readiness.
-- Third-party source figures remain governed by their original licenses.
-
-## Licensing and Attribution
-
-BioFigureBench code and repository documentation are released under the
+BioReasonBench code and repository documentation are released under the
 repository license. Third-party figures and article materials are not relicensed
 by this repository.
 

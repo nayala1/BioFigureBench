@@ -1,6 +1,11 @@
 # Changelog
 
-## 0.2.0 — Final MVP revision
+## 0.2.0 — BioReasonBench Figure Interpretation pilot
+
+- Renamed the public project to BioReasonBench for the first public release,
+  while preserving the internal `biofigurebench` package and CLI.
+- Positioned the release as the Biological Figure Interpretation pilot
+  developed from the earlier BioFigureBench working project.
 
 - Corrected BFB-002 to distinguish DD/VD and DA/DB reporters and all panel groups.
 - Removed unsupported penetrance language from the BFB-002 reference conclusion.

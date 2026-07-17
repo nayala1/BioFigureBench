@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "biofigurebench"
 version = "0.2.0"
-description = "An expert-annotated benchmark for evaluating AI interpretation of biological figures."
+description = "BioReasonBench Biological Figure Interpretation pilot, distributed as biofigurebench."
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}

@@ -27,7 +27,7 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     cases = load_cases(args.dataset)
 
-    headers = {"User-Agent": "BioFigureBench/0.1 (+research benchmark)"}
+    headers = {"User-Agent": "BioReasonBench/0.2.0 (+research benchmark)"}
     with httpx.Client(follow_redirects=True, timeout=60, headers=headers) as client:
         for case in cases:
             url = str(case.source.image_url)

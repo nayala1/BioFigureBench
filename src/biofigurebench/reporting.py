@@ -132,8 +132,8 @@ def write_report(
         if not missing_cases
         else f"<div class='warning'><strong>Incomplete run:</strong> Missing cases: {html.escape(', '.join(missing_cases))}</div>"
     )
-    report = f"""<!doctype html><html><head><meta charset='utf-8'><title>BioFigureBench Run Report</title><style>{css}</style></head>
-    <body><h1>BioFigureBench Run Report</h1><p class='subtitle'>Five-case MVP summary. Automated scores are rubric proxies and should not be presented as expert biological-accuracy scores.</p>
+    report = f"""<!doctype html><html><head><meta charset='utf-8'><title>BioReasonBench Biological Figure Interpretation Pilot Report</title><style>{css}</style></head>
+    <body><h1>BioReasonBench Biological Figure Interpretation Pilot Report</h1><p class='subtitle'>Five-case Biological Figure Interpretation pilot summary. Automated scores are rubric proxies and should not be presented as expert biological-accuracy scores.</p>
     {coverage_warning}
     <div class='grid'>
       <div class='metric'><div class='label'>Cases evaluated</div><div class='value'>{metrics['evaluated_cases']}/{metrics['benchmark_cases']}</div></div>

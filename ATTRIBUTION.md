@@ -1,11 +1,11 @@
 # Attribution
 
-BioFigureBench uses third-party biological figures as benchmark prompts. The
+BioReasonBench uses third-party biological figures as benchmark prompts. The
 repository records source article, DOI, figure identifier, source URL, figure
 URL, license, and attribution text for each item in
 `data/benchmark.jsonl`.
 
-The BioFigureBench software and repository documentation are licensed under
+The BioReasonBench software and repository documentation are licensed under
 the repository license. That license does not relicense third-party figures,
 publisher pages, article content, or other external source material. Users
 should consult the item-level metadata and original source pages before

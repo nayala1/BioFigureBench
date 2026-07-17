@@ -1,8 +1,8 @@
-# BioFigureBench benchmark card
+# BioReasonBench benchmark card
 
 ## Version
 
-0.2.0 — final five-case MVP.
+0.2.0 — Biological Figure Interpretation pilot.
 
 ## Intended use
 
@@ -11,6 +11,9 @@ Evaluate whether multimodal AI systems can interpret biological figures while se
 ## Cases
 
 The release contains five openly licensed figures spanning cell microscopy, neurodevelopment, single-cell genomics, cancer functional genomics, and preclinical therapeutics.
+
+BioReasonBench is intended as a broader life-sciences reasoning benchmark, but
+the v0.2.0 release evaluates biological figure interpretation only.
 
 ## Automated scoring
 

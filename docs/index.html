@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>BioFigureBench Final Expert Review</title>
+<title>BioReasonBench Biological Figure Interpretation Pilot Expert Review</title>
 <style>
 body { font-family: Arial, sans-serif; max-width: 1180px; margin: 0 auto; padding: 34px; color: #202124; background: #f7f8fa; }
 h1,h2,h3 { color: #17233c; }
@@ -21,8 +21,8 @@ ul { line-height:1.5; }
 </style>
 </head>
 <body>
-<h1>BioFigureBench Final Expert Review</h1>
-<p class="subtitle">Five-case Claude Sonnet 5 MVP. Expert scores are provisional scientific adjudications based on the submitted responses, supplied figure context, benchmark legends, and reference rubrics.</p>
+<h1>BioReasonBench Biological Figure Interpretation Pilot Expert Review</h1>
+<p class="subtitle">Five-case Biological Figure Interpretation pilot with Claude Sonnet 5. Expert scores are provisional scientific adjudications based on the submitted responses, supplied figure context, benchmark legends, and reference rubrics.</p>
 
 <div class="grid">
   <div class="metric"><div class="label">Cases completed</div><div class="value">5/5</div></div>
@@ -40,7 +40,7 @@ ul { line-height:1.5; }
 <li>Claude performed strongly on four cases and materially misinterpreted the motor-neuron morphology case.</li>
 <li>The automated score substantially underestimates semantically correct paraphrases in BFB-001, BFB-003, BFB-004, and BFB-005.</li>
 <li>The contradiction detector failed to flag explicit panel-level errors in BFB-002, so 100% claim safety should not be interpreted as absence of biological error.</li>
-<li>The benchmark is ready to freeze as a functional MVP. The principal project finding is the discrepancy between lexical rubric coverage and expert biological adjudication.</li>
+<li>The Biological Figure Interpretation pilot is ready to freeze as a functional v0.2.0 release. The principal project finding is the discrepancy between lexical rubric coverage and expert biological adjudication.</li>
 </ul>
 </div>
 
@@ -129,8 +129,8 @@ ul { line-height:1.5; }
 
 <div class="panel">
 <h2>Final project recommendation</h2>
-<p>Freeze v0.2.0 and stop revising the evaluator before applying. Publish the automated results together with this expert-review layer, clearly labeling the automated metric as a rubric proxy. The project already demonstrates benchmark design, multimodal API integration, structured outputs, reproducible execution, failure analysis, and domain-expert adjudication.</p>
-<p>One optional later extension is a second model baseline, but it is not required for the project to be credible in an application.</p>
+<p>Freeze v0.2.0 and stop revising the evaluator before release. Publish the automated results together with this expert-review layer, clearly labeling the automated metric as a rubric proxy. The project already demonstrates benchmark design, multimodal API integration, structured outputs, reproducible execution, failure analysis, and domain-expert adjudication.</p>
+<p>One optional later extension is a second model baseline, but it is not required for this pilot release.</p>
 </div>
 
 <p class="note"><strong>Important:</strong> Expert scores are provisional and were not produced through blinded multi-rater adjudication. They are suitable for MVP analysis and portfolio presentation, not for a formal benchmark publication claim.</p>

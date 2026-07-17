@@ -139,7 +139,7 @@ def _write_scores(scores, output: str | Path) -> None:
 def cmd_score(args: argparse.Namespace) -> None:
     scores = _score_rows(args.dataset, args.responses)
     _write_scores(scores, args.output)
-    table = Table(title="BioFigureBench automated rubric scores")
+    table = Table(title="BioReasonBench automated rubric scores")
     table.add_column("Case")
     table.add_column("Model")
     table.add_column("Score", justify="right")
